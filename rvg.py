@@ -25,6 +25,7 @@ def plot_rvg_exp(n : int, lam : float = 1, bins : int = 100) -> None:
     plt.hist(data, bins=bins)
     plt.ylabel('Sample Count')
     plt.xlabel('Random Variate')
+    plt.text(0.95, 0.95, f'λ = {lam}\n samples = {n}', horizontalalignment='right', verticalalignment='top', transform=plt.gca().transAxes)
     plt.show()
     
 if __name__ == "__main__":
